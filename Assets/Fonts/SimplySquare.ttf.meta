@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: bd3cd24e99dd56e41a119cfa29ca1758
+timeCreated: 1507735390
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 199
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Simply Square JL
+  fontNames:
+  - Simply Square JL
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 2
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

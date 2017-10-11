@@ -8,5 +8,5 @@ public class EventText
 	public string name;
 
 	[TextArea(3,10)]
-	public string[] eventText;
+	public string[] textForEvent;
 }
