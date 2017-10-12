@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
   m_Name: Test1
   m_EditorClassIdentifier: 
-  _eventName: First Event
-  _textForEvent: This is your very first event, hope you are proud
+  _eventName: Vulcano!
+  _textForEvent: The land is on Fire!, we need to have the army evacuate affected
+    areas! The land is on Fire!, we need to have the army evacuate affected areas!
   _responseLeft: No
-  _responseRight: Yes
+  _responseRight: The land is on Fire!, we need to have the army evacuate affected
+    areas! The land is on Fire!, we need to have the army evacuate affected areas!
