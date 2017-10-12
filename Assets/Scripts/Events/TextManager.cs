@@ -5,55 +5,79 @@ using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour
 {
-	public Text nameText;
-	public Text eventDisplayText;
+	[SerializeField]
+	private Text nameText;
+	[SerializeField]
+	private Text eventDisplayText;
+	[SerializeField]
+	private Text leftResponse;
+	[SerializeField]
+	private Text rightResponse;
 
-	private Queue<string> events;
+	public EventCards[] _eventArray;
+	private EventCards eventCards;
+	private int eventNumber = 0;
+
+	[SerializeField]
+	private int arraySize;
+	[SerializeField]
+	private bool waitCheck;
 
 	void Start()
 	{
-		events = new Queue<string>();
+		eventNumber = 0;
+		eventCards = _eventArray[eventNumber];
+		StartEvent();
+		//print(_eventArray[eventNumber]);
+		//print(_eventArray[eventNumber]._eventName);
 	}
 
-	public void StartEvent(EventText eventText)
+	public void StartEvent()    //starts event, gives event name and event text, 
+								//scrolls throug event text.
 	{
-		nameText.text = eventText.name;
-
-		events.Clear();
-
-		foreach (string nrEvent in eventText.textForEvent)
+		if (waitCheck)	//check if scrolling is finished of current event.
 		{
-			events.Enqueue(nrEvent);
+			return;
 		}
 
-		DisplayNextEventText();
-	}
+		waitCheck = true;
+		TrackNumber();
+		nameText.text = eventCards._eventName;
 
-	public void DisplayNextEventText()
-	{
-		if (events.Count == 0)
+		if (eventNumber > arraySize)
 		{
 			EndEvent();
 			return;
 		}
+		//StopCoroutine(LetterPopIn(eventCards._responseRight));
+		StopAllCoroutines();
+		StartCoroutine(LetterPopIn(eventCards._textForEvent, eventDisplayText));
+		StartCoroutine(LetterPopIn(eventCards._responseLeft, leftResponse));
+		StartCoroutine(LetterPopIn(eventCards._responseRight, rightResponse));
 
-		string nrEvent = events.Dequeue();
-		//eventDisplayText.text = nrEvent;
-		StopCoroutine(LetterPopIn(nrEvent));
-		StartCoroutine(LetterPopIn(nrEvent));
 	}
 
-	IEnumerator LetterPopIn (string nrEvent)
+	void TrackNumber()  //keeps track of what event is current
 	{
-		eventDisplayText.text = "";
-		foreach(char letter in nrEvent.ToCharArray())
+		if (eventNumber < arraySize)
 		{
-			eventDisplayText.text += letter;
-			yield return null;
+			eventCards = _eventArray[eventNumber];
+			eventNumber++;
 		}
 	}
 
-	void EndEvent()
+	IEnumerator LetterPopIn(string scrollArray, Text locationText) //scroll text Coroutine
+	{
+		locationText.text = "";
+		foreach (char letter in scrollArray.ToCharArray())
+		{
+			locationText.text += letter;
+			yield return null;
+		}
+		waitCheck = false;
+	}
+
+	void EndEvent() //post that there is no more events.
 	{
 		Debug.Log("End of events");
 	}

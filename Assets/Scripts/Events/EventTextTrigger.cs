@@ -9,6 +9,6 @@ public class EventTextTrigger : MonoBehaviour
 
 	public void TriggerEvents()
 	{
-		FindObjectOfType<TextManager>().StartEvent(eventText);
+		//FindObjectOfType<TextManager>().StartEvent(eventText);
 	}
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 [System.Serializable]
 public class EventText
-{	
+{
 	public string name;
 
-	[TextArea(3,10)]
+	[TextArea(3, 10)]
 	public string[] textForEvent;
 }

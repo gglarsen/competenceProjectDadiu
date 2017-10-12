@@ -9,7 +9,7 @@ public class BtnGetChar : MonoBehaviour
 
 	public void ClickMovement()
 	{
-		print(triggerMovement);
+		//print(triggerMovement);
 		if (!triggerMovement)
 		{
 			StartCoroutine(MovementTriggerIE());

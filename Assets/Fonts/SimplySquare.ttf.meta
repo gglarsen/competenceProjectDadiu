@@ -4,7 +4,7 @@ timeCreated: 1507735390
 licenseType: Pro
 TrueTypeFontImporter:
   serializedVersion: 4
-  fontSize: 199
+  fontSize: 100
   forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
@@ -14,7 +14,7 @@ TrueTypeFontImporter:
   - Simply Square JL
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 2
+  fontRenderingMode: 0
   ascentCalculationMode: 1
   userData: 
   assetBundleName: 
