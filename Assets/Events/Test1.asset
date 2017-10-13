@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
   m_Name: Test1
   m_EditorClassIdentifier: 
-  _eventName: Vulcano!
-  _textForEvent: The land is on Fire!, we need to have the army evacuate affected
-    areas! The land is on Fire!, we need to have the army evacuate affected areas!
-  _responseLeft: No
-  _responseRight: The land is on Fire!, we need to have the army evacuate affected
-    areas! The land is on Fire!, we need to have the army evacuate affected areas!
+  _eventName: Event Name!
+  _textForEvent: This is the event text, here there will be an event. Events are going
+    here. Because this is the place for events. Events belong in this panel. The player
+    reads this event.
+  _responseLeft: One response to the current event
+  _responseRight: Another response to the current event

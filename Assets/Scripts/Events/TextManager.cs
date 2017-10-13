@@ -49,7 +49,6 @@ public class TextManager : MonoBehaviour
 			EndEvent();
 			return;
 		}
-		//StopCoroutine(LetterPopIn(eventCards._responseRight));
 		StopAllCoroutines();
 		StartCoroutine(LetterPopIn(eventCards._textForEvent, eventDisplayText));
 		StartCoroutine(LetterPopIn(eventCards._responseLeft, leftResponse));
