@@ -15,3 +15,13 @@ MonoBehaviour:
   _textForEvent: This is the Second event. Keep it up.
   _responseLeft: Eat Shit
   _responseRight: You Fucking Bet
+  _checkEgo: 0
+  _meterEgo: 0
+  _checkSwamp: 0
+  _meterSwamp: 10
+  _checkInternational: 0
+  _meterInternational: 20
+  _checkBudget: 0
+  _meterBudget: 0
+  _checkEnergy: 0
+  _meterEnergy: 0

@@ -14,4 +14,15 @@ public class EventCards : ScriptableObject
 
 	[SerializeField]
 	public string _responseRight;
+
+	public bool _checkEgo;
+	public int _meterEgo;
+	public bool _checkSwamp;
+	public int _meterSwamp;
+	public bool _checkInternational;
+	public int _meterInternational;
+	public bool _checkBudget;
+	public int _meterBudget;
+	public bool _checkEnergy;
+	public int _meterEnergy;
 }

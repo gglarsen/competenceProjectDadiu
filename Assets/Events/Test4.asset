@@ -15,3 +15,13 @@ MonoBehaviour:
   _textForEvent: blablablalbla
   _responseLeft: No
   _responseRight: Tweet that the king is dead
+  _checkEgo: 0
+  _meterEgo: 100
+  _checkSwamp: 0
+  _meterSwamp: 100
+  _checkInternational: 0
+  _meterInternational: -100
+  _checkBudget: 0
+  _meterBudget: 0
+  _checkEnergy: 0
+  _meterEnergy: 0
