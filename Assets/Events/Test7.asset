@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
-  m_Name: Test4
+  m_Name: Test7
   m_EditorClassIdentifier: 
-  _eventName: Number 4
+  _eventName: Number 7
   _textForEvent: budget 10 energy 10
   _responseLeft: No
   _checkEgo: 0

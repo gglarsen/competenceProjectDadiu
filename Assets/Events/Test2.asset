@@ -11,17 +11,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
   m_Name: Test2
   m_EditorClassIdentifier: 
-  _eventName: Second Event
-  _textForEvent: This is the Second event. Keep it up.
+  _eventName: Number 2
+  _textForEvent: swamp 10 internation 10
   _responseLeft: Eat Shit
-  _responseRight: You Fucking Bet
   _checkEgo: 0
   _meterEgo: 0
   _checkSwamp: 1
   _meterSwamp: 10
   _checkInternational: 1
-  _meterInternational: 20
+  _meterInternational: 10
   _checkBudget: 0
   _meterBudget: 0
   _checkEnergy: 0
   _meterEnergy: 0
+  _responseRight: You Fucking Bet
+  _checkEgoRight: 0
+  _meterEgoRight: 0
+  _checkSwampRight: 1
+  _meterSwampRight: -10
+  _checkInternationalRight: 1
+  _meterInternationalRight: -10
+  _checkBudgetRight: 0
+  _meterBudgetRight: 0
+  _checkEnergyRight: 0
+  _meterEnergyRight: 0

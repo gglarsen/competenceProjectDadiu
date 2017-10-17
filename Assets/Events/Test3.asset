@@ -11,18 +11,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
   m_Name: Test3
   m_EditorClassIdentifier: 
-  _eventName: Third
-  _textForEvent: 'Notice how the title changed, also filler: fjds hjfkdlsh fkdhs kflhdsk
-    lfhdksl hfdsl hfkdsl hfkdls hfkdlsh fkldhs kflhdskl fhkdsl hfdlsl'
+  _eventName: Number 3
+  _textForEvent: interational 10 budget 10
   _responseLeft: No
-  _responseRight: Yes
-  _checkEgo: 1
-  _meterEgo: 20
-  _checkSwamp: 1
-  _meterSwamp: -10
+  _checkEgo: 0
+  _meterEgo: 0
+  _checkSwamp: 0
+  _meterSwamp: 0
   _checkInternational: 1
-  _meterInternational: -10
-  _checkBudget: 0
-  _meterBudget: 0
+  _meterInternational: 10
+  _checkBudget: 1
+  _meterBudget: 10
   _checkEnergy: 0
   _meterEnergy: 0
+  _responseRight: Yes
+  _checkEgoRight: 0
+  _meterEgoRight: 0
+  _checkSwampRight: 0
+  _meterSwampRight: 0
+  _checkInternationalRight: 1
+  _meterInternationalRight: -10
+  _checkBudgetRight: 1
+  _meterBudgetRight: -10
+  _checkEnergyRight: 0
+  _meterEnergyRight: 0

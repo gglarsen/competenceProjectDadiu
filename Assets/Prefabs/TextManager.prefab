@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925edd09f058a7d49b27abc419b2a6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _LeftBtnPressed: 0
+  _RightBtnPressed: 0
   nameText: {fileID: 0}
   eventDisplayText: {fileID: 0}
   leftResponse: {fileID: 0}
@@ -60,6 +62,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af5521d04390ccf4abe60755d44063b4, type: 2}
   - {fileID: 11400000, guid: f84adbbe4b01b8f4e9ff4938039829c2, type: 2}
   - {fileID: 11400000, guid: a60b9fcc0f1e2854bbc9654ad2bfd888, type: 2}
-  arraySize: 4
+  - {fileID: 11400000, guid: 49e3dc9f5e689ee478d634653e1b6016, type: 2}
+  - {fileID: 11400000, guid: 98d5d2c8071bd79499e93af7b6b80a4e, type: 2}
+  - {fileID: 11400000, guid: 98d5d2c8071bd79499e93af7b6b80a4e, type: 2}
+  - {fileID: 11400000, guid: 9dbd8faaab31c704595b4e3b9f06dca7, type: 2}
+  arraySize: 8
   waitCheck: 0
+  _sphereCheck: 
+  _sphereCheckRight: 
   _meterNumber: 
+  _meterNumberRight: 

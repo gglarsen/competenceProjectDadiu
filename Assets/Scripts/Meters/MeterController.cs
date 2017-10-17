@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MeterController : MonoBehaviour
 {
+	private bool LeftBtnPressed;
+	private bool RightBtnPressed;
+
 	private int[] meterArray;
+	private int[] meterArrayRight;
 
 	private Vector3 currentScale;
 	private Vector3 targetScale;
@@ -34,14 +39,27 @@ public class MeterController : MonoBehaviour
 	void Start()
 	{
 		meterArray = new int[5];
-		AssignMeter();
+		//AssignMeter();
 	}
 
 	void ScaleMeter()
 	{
 		TextManager tM = GameObject.Find("TextManager").GetComponent<TextManager>();
 		meterArray = tM._meterNumber;
-		AssignMeter();
+		meterArrayRight = tM._meterNumberRight;
+		LeftBtnPressed = tM._LeftBtnPressed;
+		RightBtnPressed = tM._RightBtnPressed;
+
+		if (LeftBtnPressed)
+		{
+			AssignMeter(meterArray);
+			LeftBtnPressed = false;
+		}
+		else if (RightBtnPressed)
+		{
+			AssignMeter(meterArrayRight);
+			RightBtnPressed = false;
+		}
 
 		currentScale = transform.localScale;
 		targetScale = currentScale + new Vector3(0, newScale, 0);
@@ -63,24 +81,24 @@ public class MeterController : MonoBehaviour
 		yield return null;
 	}
 
-	void AssignMeter()
+	void AssignMeter(int[] getArray)
 	{
-		switch(blockNumber) //Assigns the Right Variable to the right Meter
+		switch (blockNumber) //Assigns the Right Variable to the right Meter
 		{
 			case 1:
-				newScale = ((float)meterArray[0] / 100);
+				newScale = ((float)getArray[0] / 100);
 				break;
 			case 2:
-				newScale = ((float)meterArray[1] / 100);
+				newScale = ((float)getArray[1] / 100);
 				break;
 			case 3:
-				newScale = ((float)meterArray[2] / 100);
+				newScale = ((float)getArray[2] / 100);
 				break;
 			case 4:
-				newScale = ((float)meterArray[3] / 100);
+				newScale = ((float)getArray[3] / 100);
 				break;
 			case 5:
-				newScale = ((float)meterArray[4] / 100);
+				newScale = ((float)getArray[4] / 100);
 				break;
 			default:
 				Debug.Log("Meter Assignment Failed");

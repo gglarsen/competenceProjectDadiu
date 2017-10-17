@@ -11,19 +11,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
   m_Name: Test1
   m_EditorClassIdentifier: 
-  _eventName: Event Name!
-  _textForEvent: This is the event text, here there will be an event. Events are going
-    here. Because this is the place for events. Events belong in this panel. The player
-    reads this event.
+  _eventName: Number 1
+  _textForEvent: ego 10, sawmp 10
   _responseLeft: One response to the current event
-  _responseRight: Another response to the current event
   _checkEgo: 1
   _meterEgo: 10
   _checkSwamp: 1
-  _meterSwamp: -10
+  _meterSwamp: 10
   _checkInternational: 0
   _meterInternational: 0
   _checkBudget: 0
   _meterBudget: 0
   _checkEnergy: 0
   _meterEnergy: 0
+  _responseRight: Another response to the current event
+  _checkEgoRight: 1
+  _meterEgoRight: -10
+  _checkSwampRight: 1
+  _meterSwampRight: -10
+  _checkInternationalRight: 0
+  _meterInternationalRight: 0
+  _checkBudgetRight: 0
+  _meterBudgetRight: 0
+  _checkEnergyRight: 0
+  _meterEnergyRight: 0

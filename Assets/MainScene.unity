@@ -367,7 +367,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 95795763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 3, z: 6.67}
+  m_LocalPosition: {x: -8.5, y: 3, z: 6.67}
   m_LocalScale: {x: 1.0370624, y: 5, z: 2.07377}
   m_Children:
   - {fileID: 652284790}
@@ -451,7 +451,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 113575810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 3, z: 3.67}
+  m_LocalPosition: {x: -8.5, y: 3, z: 3.67}
   m_LocalScale: {x: 1.0370624, y: 5, z: 2.07377}
   m_Children:
   - {fileID: 730877875}
@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 129653498}
   - component: {fileID: 129653497}
   - component: {fileID: 129653496}
+  - component: {fileID: 129653495}
   m_Layer: 5
   m_Name: RightChoiceBtn
   m_TagString: Untagged
@@ -497,6 +498,141 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0}
+--- !u!114 &129653495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129653493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1526946737}
+          m_MethodName: IncreaseScaleRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1851517229}
+          m_MethodName: IncreaseScaleRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1048916329}
+          m_MethodName: IncreaseScaleRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 730877876}
+          m_MethodName: IncreaseScaleRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 652284791}
+          m_MethodName: IncreaseScaleRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1526946737}
+          m_MethodName: DecreaseScale
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1851517229}
+          m_MethodName: DecreaseScale
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1048916329}
+          m_MethodName: DecreaseScale
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 730877876}
+          m_MethodName: DecreaseScale
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 652284791}
+          m_MethodName: DecreaseScale
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &129653496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -572,6 +708,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1853563136}
         m_MethodName: StartEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1853563136}
+        m_MethodName: GetButtonPressedRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1034,7 +1181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 4
+  fullScale: {x: 1, y: 0.2, z: 0.5}
+  zeroScale: {x: 0, y: 0, z: 0}
   textManager: {fileID: 1853563136}
+  time: 1
 --- !u!23 &652284792
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1130,7 +1280,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 3
+  fullScale: {x: 1, y: 0.2, z: 0.5}
+  zeroScale: {x: 0, y: 0, z: 0}
   textManager: {fileID: 1853563136}
+  time: 1
 --- !u!23 &730877877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1606,7 +1759,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 878221643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 3, z: -5.33}
+  m_LocalPosition: {x: -8.5, y: 3, z: -5.33}
   m_LocalScale: {x: 1.0370624, y: 5, z: 2.07377}
   m_Children:
   - {fileID: 1526946733}
@@ -1797,7 +1950,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 2
+  fullScale: {x: 1, y: 0.2, z: 0.5}
+  zeroScale: {x: 0, y: 0, z: 0}
   textManager: {fileID: 1853563136}
+  time: 1
 --- !u!23 &1048916330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1926,7 +2082,7 @@ Transform:
   m_GameObject: {fileID: 1071505565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: -0.5, z: 1}
-  m_LocalScale: {x: 31, y: 1, z: 25}
+  m_LocalScale: {x: 25, y: 1, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -2270,7 +2426,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478012309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 3, z: -2.33}
+  m_LocalPosition: {x: -8.5, y: 3, z: -2.33}
   m_LocalScale: {x: 1.0370624, y: 5, z: 2.07377}
   m_Children:
   - {fileID: 1851517228}
@@ -2420,7 +2576,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 0
+  fullScale: {x: 1, y: 0.2, z: 0.5}
+  zeroScale: {x: 0, y: 0, z: 0}
   textManager: {fileID: 1853563136}
+  time: 1
 --- !u!1001 &1536419645
 Prefab:
   m_ObjectHideFlags: 0
@@ -2863,7 +3022,7 @@ Camera:
   far clip plane: 1000
   field of view: 28.3
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 10.1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2886,7 +3045,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808302631}
   m_LocalRotation: {x: -0.0689389, y: 0.90876484, z: -0.16643323, w: -0.3764225}
-  m_LocalPosition: {x: 31.6, y: 15.1, z: 26.08}
+  m_LocalPosition: {x: 31.48, y: 16.81, z: 25.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2898,7 +3057,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808302631}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -2995,7 +3154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 1
+  fullScale: {x: 1, y: 0.2, z: 0.5}
+  zeroScale: {x: 0, y: 0, z: 0}
   textManager: {fileID: 1853563136}
+  time: 1
 --- !u!23 &1851517230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3163,7 +3325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -3225,6 +3387,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1853563136}
         m_MethodName: StartEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1853563136}
+        m_MethodName: GetButtonPressedLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3298,7 +3471,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1526946737}
-          m_MethodName: IncreaseScale
+          m_MethodName: IncreaseScaleLeft
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3309,7 +3482,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1851517229}
-          m_MethodName: IncreaseScale
+          m_MethodName: IncreaseScaleLeft
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3320,7 +3493,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1048916329}
-          m_MethodName: IncreaseScale
+          m_MethodName: IncreaseScaleLeft
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3331,7 +3504,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 730877876}
-          m_MethodName: IncreaseScale
+          m_MethodName: IncreaseScaleLeft
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3342,7 +3515,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 652284791}
-          m_MethodName: IncreaseScale
+          m_MethodName: IncreaseScaleLeft
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3492,7 +3665,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2011636162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 3, z: 0.6700001}
+  m_LocalPosition: {x: -8.5, y: 3, z: 0.6700001}
   m_LocalScale: {x: 1.0370624, y: 5, z: 2.07377}
   m_Children:
   - {fileID: 1048916328}
