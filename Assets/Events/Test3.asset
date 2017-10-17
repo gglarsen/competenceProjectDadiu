@@ -16,11 +16,11 @@ MonoBehaviour:
     lfhdksl hfdsl hfkdsl hfkdls hfkdlsh fkldhs kflhdskl fhkdsl hfdlsl'
   _responseLeft: No
   _responseRight: Yes
-  _checkEgo: 0
+  _checkEgo: 1
   _meterEgo: 20
-  _checkSwamp: 0
+  _checkSwamp: 1
   _meterSwamp: -10
-  _checkInternational: 0
+  _checkInternational: 1
   _meterInternational: -10
   _checkBudget: 0
   _meterBudget: 0

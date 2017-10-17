@@ -8,16 +8,6 @@ public class SpawnChar : MonoBehaviour
 	private Transform charPrefab;
 	private bool timerCheck;
 
-	void Start()
-	{
-
-	}
-
-	void Update()
-	{
-
-	}
-
 	public void InstantiateChar() // instantiate new char at start pos.
 	{
 		if (!timerCheck)

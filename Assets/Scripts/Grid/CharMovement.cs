@@ -86,6 +86,5 @@ public class CharMovement : MonoBehaviour
 		yield return new WaitForSeconds(1f);
 		timerCheck = false;
 	}
-
 }
 

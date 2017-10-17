@@ -24,16 +24,22 @@ public class TextManager : MonoBehaviour
 	private bool waitCheck;
 
 	[SerializeField]
+	public bool[] _sphereCheck;
+	[SerializeField]
 	public int[] _meterNumber;
 	private EventCards eventCardsBehind;
 	//private bool firstTurnCheck;
 
 	public delegate void ScaleAction();
-	public static event ScaleAction meterActive;
+	public static event ScaleAction MeterActive;
+
+	public delegate void CheckAction();
+	public static event CheckAction CheckActive;
 
 	void Start()
 	{
 		_meterNumber = new int[5];
+		_sphereCheck = new bool[5];
 		eventNumber = 0;
 		eventCards = _eventArray[eventNumber];
 		//StartEvent();
@@ -52,16 +58,20 @@ public class TextManager : MonoBehaviour
 
 		if (eventNumber == 0) //if first time, make sure to not go below arraySize;
 		{
-			meterPass(eventCards); //track meter numbers;
+			MeterPass(eventCards); //track meter numbers;
 		}
 		else if (eventNumber > 0)
 		{
 			eventCardsBehind = _eventArray[eventNumber - 1];
-			meterPass(eventCardsBehind); //track meter numbers;
-			meterActive(); //Send event to Meters
+			MeterPass(eventCardsBehind); //track meter numbers, -1 to not change before decision;
+			MeterActive(); //Send scale event to Meters
 		}
 
 		TrackNumber();
+
+		CheckPass(); // assign boolchecks for spheres to array;
+		CheckActive(); // send new onEnter update to update spheres;
+
 		nameText.text = eventCards._eventName;
 
 		if (eventNumber > arraySize)
@@ -103,12 +113,21 @@ public class TextManager : MonoBehaviour
 		Debug.Log("End of events");
 	}
 
-	void meterPass(EventCards numberPass) //assigns the correct 
+	void MeterPass(EventCards numberPass) //assigns the correct 
 	{
 		_meterNumber[0] = numberPass._meterEgo;
 		_meterNumber[1] = numberPass._meterSwamp;
 		_meterNumber[2] = numberPass._meterInternational;
 		_meterNumber[3] = numberPass._meterBudget;
 		_meterNumber[4] = numberPass._meterEnergy;
+	}
+
+	void CheckPass() //assigns the correct 
+	{
+		_sphereCheck[0] = eventCards._checkEgo;
+		_sphereCheck[1] = eventCards._checkSwamp;
+		_sphereCheck[2] = eventCards._checkInternational;
+		_sphereCheck[3] = eventCards._checkBudget;
+		_sphereCheck[4] = eventCards._checkEnergy;
 	}
 }

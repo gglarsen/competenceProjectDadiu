@@ -17,9 +17,9 @@ MonoBehaviour:
   _responseRight: You Fucking Bet
   _checkEgo: 0
   _meterEgo: 0
-  _checkSwamp: 0
+  _checkSwamp: 1
   _meterSwamp: 10
-  _checkInternational: 0
+  _checkInternational: 1
   _meterInternational: 20
   _checkBudget: 0
   _meterBudget: 0

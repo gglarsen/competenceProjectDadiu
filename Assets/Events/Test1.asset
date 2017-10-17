@@ -17,9 +17,9 @@ MonoBehaviour:
     reads this event.
   _responseLeft: One response to the current event
   _responseRight: Another response to the current event
-  _checkEgo: 0
+  _checkEgo: 1
   _meterEgo: 10
-  _checkSwamp: 0
+  _checkSwamp: 1
   _meterSwamp: -10
   _checkInternational: 0
   _meterInternational: 0

@@ -23,16 +23,17 @@ public class MeterController : MonoBehaviour
 
 	void OnEnable()
 	{
-		TextManager.meterActive += ScaleMeter;
+		TextManager.MeterActive += ScaleMeter;
 	}
 
 	void OnDisable()
 	{
-		TextManager.meterActive -= ScaleMeter;
+		TextManager.MeterActive -= ScaleMeter;
 	}
 
 	void Start()
 	{
+		meterArray = new int[5];
 		AssignMeter();
 	}
 
