@@ -42,6 +42,7 @@ public class MeterController : MonoBehaviour
 
 	void Start()
 	{
+        fullMeterCheck = false;
 		_resourceMeter = 50;
 		meterArray = new int[5];
 	}
