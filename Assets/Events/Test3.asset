@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: Test3
   m_EditorClassIdentifier: 
   _eventName: Number 3
-  _textForEvent: interational 10 budget 10
+  _textForEvent: ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego
+    10, sawmp 10
   _responseLeft: No
   _checkEgo: 0
   _meterEgo: 0

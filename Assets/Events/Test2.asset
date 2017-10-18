@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: Test2
   m_EditorClassIdentifier: 
   _eventName: Number 2
-  _textForEvent: swamp 10 internation 10
+  _textForEvent: ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego
+    10, sawmp 10ego 10, sawmp 10
   _responseLeft: Eat Shit
   _checkEgo: 0
   _meterEgo: 0

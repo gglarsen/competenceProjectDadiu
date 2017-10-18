@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: Test1
   m_EditorClassIdentifier: 
   _eventName: Number 1
-  _textForEvent: ego 10, sawmp 10
+  _textForEvent: ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego
+    10, sawmp 10
   _responseLeft: One response to the current event
   _checkEgo: 1
   _meterEgo: 10

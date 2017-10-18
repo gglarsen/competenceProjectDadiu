@@ -33,7 +33,7 @@ public class IconController : MonoBehaviour
 		TextManager.CheckActive -= SphereGetBtnPress;
 	}
 
-	private void SphereGetBtnPress()
+	private void SphereGetBtnPress() // get what button is clicked
 	{
 		LeftBtnPressed = textManager._LeftBtnPressed;
 		RightBtnPressed = textManager._RightBtnPressed;
@@ -96,13 +96,13 @@ public class IconController : MonoBehaviour
 		}
 	}
 
-	private IEnumerator ScaleLerpSphere(Vector3 targetScale) // transfer this event to the next 
+	private IEnumerator ScaleLerpSphere(Vector3 targetScale) // Tween scale of sphere, 
 	{
 		float elapsedTime = 0;
 		while (elapsedTime < time)
 		{
 			currentScale = transform.localScale;
-			transform.localScale = Vector3.Lerp(currentScale, targetScale, .2f);
+			transform.localScale = Vector3.Lerp(currentScale, targetScale, .1f);
 			elapsedTime += Time.deltaTime;
 			yield return null;
 		}

@@ -18,6 +18,8 @@ public class TextManager : MonoBehaviour
 	private Text leftResponse;
 	[SerializeField]
 	private Text rightResponse;
+	[SerializeField]
+	private GameObject gameManager;
 
 	public EventCards[] _eventArray;
 	private EventCards[] shuffelArray;
@@ -53,13 +55,7 @@ public class TextManager : MonoBehaviour
 		_sphereCheck = new bool[5];
 		_sphereCheckRight = new bool[5];
 
-		for (int i = 0; i < arraySize; i++) // shuffels the events
-		{
-			EventCards shuffelArray = _eventArray[i];
-			int randomIndex = Random.Range(i, arraySize);
-			_eventArray[i] = _eventArray[randomIndex];
-			_eventArray[randomIndex] = shuffelArray;
-		}
+		ShuffelEvents();
 
 		eventNumber = 0;
 		eventCards = _eventArray[eventNumber];
@@ -82,7 +78,8 @@ public class TextManager : MonoBehaviour
 	public void StartEvent()    //starts event, gives event name and event text, 
 								//scrolls throug event text.
 	{
-		if (waitCheck)  //check if scrolling is finished of current event.
+		bool gameOverFlag = gameManager.GetComponent<GameOver>()._gameOverFlag;
+		if (waitCheck || gameOverFlag)  //check if scrolling is finished of current event.
 		{
 			return;
 		}
@@ -95,7 +92,7 @@ public class TextManager : MonoBehaviour
 		else if (eventNumber > 0)
 		{
 			eventCardsBehind = _eventArray[eventNumber - 1];
-			MeterPass(eventCardsBehind); //track meter numbers, -1 to not change before decision;
+			MeterPass(eventCardsBehind); //track meter numbers, -1 to not change before btnPress;
 			MeterActive(); //Send scale event to Meters
 		}
 
@@ -104,7 +101,11 @@ public class TextManager : MonoBehaviour
 		CheckPass(); // assign boolchecks for spheres to array;
 		CheckActive(); // send new onEnter update to update spheres;
 
-		nameText.text = eventCards._eventName;
+		gameOverFlag = gameManager.GetComponent<GameOver>()._gameOverFlag;
+		if (!gameOverFlag)
+		{
+			nameText.text = eventCards._eventName;
+		}
 
 		if (eventNumber > arraySize)
 		{
@@ -116,9 +117,12 @@ public class TextManager : MonoBehaviour
 		_RightBtnPressed = false;
 
 		StopAllCoroutines();
-		StartCoroutine(LetterPopIn(eventCards._textForEvent, eventDisplayText, true));
-		StartCoroutine(LetterPopIn(eventCards._responseLeft, leftResponse, false));
-		StartCoroutine(LetterPopIn(eventCards._responseRight, rightResponse, false));
+		if (!gameManager.GetComponent<GameOver>()._gameOverFlag)
+		{
+			StartCoroutine(LetterPopIn(eventCards._textForEvent, eventDisplayText, true));
+			StartCoroutine(LetterPopIn(eventCards._responseLeft, leftResponse, false));
+			StartCoroutine(LetterPopIn(eventCards._responseRight, rightResponse, false));
+		}
 	}
 
 	void TrackNumber()  //keeps track of what event is current
@@ -177,5 +181,16 @@ public class TextManager : MonoBehaviour
 		_sphereCheckRight[2] = eventCards._checkInternationalRight;
 		_sphereCheckRight[3] = eventCards._checkBudgetRight;
 		_sphereCheckRight[4] = eventCards._checkEnergyRight;
+	}
+
+	private void ShuffelEvents()
+	{
+		for (int i = 0; i < arraySize; i++) // shuffels the events
+		{
+			EventCards shuffelArray = _eventArray[i];
+			int randomIndex = Random.Range(i, arraySize);
+			_eventArray[i] = _eventArray[randomIndex];
+			_eventArray[randomIndex] = shuffelArray;
+		}
 	}
 }

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: Test7
   m_EditorClassIdentifier: 
   _eventName: Number 7
-  _textForEvent: budget 10 energy 10
+  _textForEvent: ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego
+    10, sawmp 10ego 10, sawmp 10
   _responseLeft: No
   _checkEgo: 0
   _meterEgo: 0
