@@ -1108,8 +1108,9 @@ GameObject:
   - component: {fileID: 455104736}
   - component: {fileID: 455104738}
   - component: {fileID: 455104737}
+  - component: {fileID: 455104739}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Ego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1166,6 +1167,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 455104735}
+--- !u!114 &455104739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 455104735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4a43976c53cf94687bf6eaf9c56b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSize: 2
 --- !u!1 &530947512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1311,7 @@ GameObject:
   - component: {fileID: 619309560}
   - component: {fileID: 619309559}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Swamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2036,7 +2049,7 @@ GameObject:
   - component: {fileID: 869236940}
   - component: {fileID: 869236939}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: International
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2188,7 +2201,7 @@ GameObject:
   - component: {fileID: 895065771}
   - component: {fileID: 895065770}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Budget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3242,7 +3255,7 @@ GameObject:
   - component: {fileID: 1478784998}
   - component: {fileID: 1478784997}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Energy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

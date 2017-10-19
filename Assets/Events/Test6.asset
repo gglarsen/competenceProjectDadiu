@@ -19,12 +19,12 @@ MonoBehaviour:
   _meterEgo: 0
   _checkSwamp: 0
   _meterSwamp: 0
-  _checkInternational: 0
-  _meterInternational: 0
+  _checkInternational: 1
+  _meterInternational: 10
   _checkBudget: 1
   _meterBudget: 10
-  _checkEnergy: 1
-  _meterEnergy: 10
+  _checkEnergy: 0
+  _meterEnergy: 0
   _responseRight: Tweet that the king is dead
   _checkEgoRight: 0
   _meterEgoRight: 0

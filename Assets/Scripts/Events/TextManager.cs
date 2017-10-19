@@ -23,7 +23,7 @@ public class TextManager : MonoBehaviour
 
 	public EventCards[] _eventArray;
 	private EventCards[] shuffelArray;
-	private EventCards eventCards;
+	private EventCards currentCard;
 	private int eventNumber = 0;
 
 	[SerializeField]
@@ -58,11 +58,7 @@ public class TextManager : MonoBehaviour
 		ShuffelEvents();
 
 		eventNumber = 0;
-		eventCards = _eventArray[eventNumber];
-
-		//StartEvent();
-		//print(_eventArray[eventNumber]);
-		//print(_eventArray[eventNumber]._eventName);
+		currentCard = _eventArray[eventNumber];
 	}
 
 	public void GetButtonPressedLeft()
@@ -87,7 +83,7 @@ public class TextManager : MonoBehaviour
 
 		if (eventNumber == 0) //if first time, make sure to not go below arraySize;
 		{
-			MeterPass(eventCards); //track meter numbers;
+			MeterPass(currentCard); //track meter numbers;
 		}
 		else if (eventNumber > 0)
 		{
@@ -104,10 +100,10 @@ public class TextManager : MonoBehaviour
 		gameOverFlag = gameManager.GetComponent<GameOver>()._gameOverFlag;
 		if (!gameOverFlag)
 		{
-			nameText.text = eventCards._eventName;
+			nameText.text = currentCard._eventName;
 		}
 
-		if (eventNumber > arraySize)
+		if (eventNumber >= arraySize)
 		{
 			EndEvent();
 			return;
@@ -119,9 +115,9 @@ public class TextManager : MonoBehaviour
 		StopAllCoroutines();
 		if (!gameManager.GetComponent<GameOver>()._gameOverFlag)
 		{
-			StartCoroutine(LetterPopIn(eventCards._textForEvent, eventDisplayText, true));
-			StartCoroutine(LetterPopIn(eventCards._responseLeft, leftResponse, false));
-			StartCoroutine(LetterPopIn(eventCards._responseRight, rightResponse, false));
+			StartCoroutine(LetterPopIn(currentCard._textForEvent, eventDisplayText, true));
+			StartCoroutine(LetterPopIn(currentCard._responseLeft, leftResponse, false));
+			StartCoroutine(LetterPopIn(currentCard._responseRight, rightResponse, false));
 		}
 	}
 
@@ -129,7 +125,7 @@ public class TextManager : MonoBehaviour
 	{
 		if (eventNumber < arraySize)
 		{
-			eventCards = _eventArray[eventNumber];
+			currentCard = _eventArray[eventNumber];
 			eventNumber++;
 		}
 	}
@@ -170,17 +166,17 @@ public class TextManager : MonoBehaviour
 
 	void CheckPass() //assigns the correct 
 	{
-		_sphereCheck[0] = eventCards._checkEgo;
-		_sphereCheck[1] = eventCards._checkSwamp;
-		_sphereCheck[2] = eventCards._checkInternational;
-		_sphereCheck[3] = eventCards._checkBudget;
-		_sphereCheck[4] = eventCards._checkEnergy;
+		_sphereCheck[0] = currentCard._checkEgo;
+		_sphereCheck[1] = currentCard._checkSwamp;
+		_sphereCheck[2] = currentCard._checkInternational;
+		_sphereCheck[3] = currentCard._checkBudget;
+		_sphereCheck[4] = currentCard._checkEnergy;
 
-		_sphereCheckRight[0] = eventCards._checkEgoRight;
-		_sphereCheckRight[1] = eventCards._checkSwampRight;
-		_sphereCheckRight[2] = eventCards._checkInternationalRight;
-		_sphereCheckRight[3] = eventCards._checkBudgetRight;
-		_sphereCheckRight[4] = eventCards._checkEnergyRight;
+		_sphereCheckRight[0] = currentCard._checkEgoRight;
+		_sphereCheckRight[1] = currentCard._checkSwampRight;
+		_sphereCheckRight[2] = currentCard._checkInternationalRight;
+		_sphereCheckRight[3] = currentCard._checkBudgetRight;
+		_sphereCheckRight[4] = currentCard._checkEnergyRight;
 	}
 
 	private void ShuffelEvents()

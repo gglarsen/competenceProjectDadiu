@@ -40,7 +40,7 @@ public class GameOver : MonoBehaviour
 
 	void EndGameScreen()
 	{
-		if (gameOverFlag == 0)
+		if (gameOverFlag == 0 && !_gameOverFlag)
 		{
 			_gameOverFlag = true;
 			gameOverFlag++;
@@ -61,17 +61,16 @@ public class GameOver : MonoBehaviour
 				leftBtn.SetActive(false);
 				RightBtn.SetActive(false);
 				restartBtn.SetActive(true);
-				//textLeftBtn.text = "";
-				//leftBtn.interactable = false;
-				//textRightBtn.text = "";
-				//RightBtn.interactable = false;
-				//restartBtn.interactable = true;
 			}
 			else if(meterStatus[i]._resourceMeter <= 0)
 			{
 				endEvents = _endEvents[i + 5];
 				endName.text = endEvents._eventName;
-			}
+                endDisplayText.text = endEvents._textForEvent;
+                leftBtn.SetActive(false);
+                RightBtn.SetActive(false);
+                restartBtn.SetActive(true);
+            }
 		}
 	}
 
