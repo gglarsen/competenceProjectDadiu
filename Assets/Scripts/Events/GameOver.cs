@@ -52,7 +52,6 @@ public class GameOver : MonoBehaviour
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			print(meterStatus[i]._resourceMeter);
 			if (meterStatus[i]._resourceMeter >= 100)
 			{
 				endEvents = _endEvents[i];

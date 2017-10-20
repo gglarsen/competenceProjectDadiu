@@ -39,6 +39,7 @@ public class TextManager : MonoBehaviour
 	public int[] _meterNumber;
 	[SerializeField]
 	public int[] _meterNumberRight;
+	public int[] _resourceCount;
 	private EventCards eventCardsBehind;
 	//private bool firstTurnCheck;
 
@@ -54,6 +55,7 @@ public class TextManager : MonoBehaviour
 		_meterNumberRight = new int[5];
 		_sphereCheck = new bool[5];
 		_sphereCheckRight = new bool[5];
+		_resourceCount = new int[5];
 
 		ShuffelEvents();
 
@@ -177,6 +179,19 @@ public class TextManager : MonoBehaviour
 		_sphereCheckRight[2] = currentCard._checkInternationalRight;
 		_sphereCheckRight[3] = currentCard._checkBudgetRight;
 		_sphereCheckRight[4] = currentCard._checkEnergyRight;
+
+		_meterNumber[0] = currentCard._meterEgo;
+		_meterNumber[1] = currentCard._meterSwamp;
+		_meterNumber[2] = currentCard._meterInternational;
+		_meterNumber[3] = currentCard._meterBudget;
+		_meterNumber[4] = currentCard._meterEnergy;
+
+		_meterNumberRight[0] = currentCard._meterEgoRight;
+		_meterNumberRight[1] = currentCard._meterSwampRight;
+		_meterNumberRight[2] = currentCard._meterInternationalRight;
+		_meterNumberRight[3] = currentCard._meterBudgetRight;
+		_meterNumberRight[4] = currentCard._meterEnergyRight;
+
 	}
 
 	private void ShuffelEvents()
@@ -185,6 +200,7 @@ public class TextManager : MonoBehaviour
 		{
 			EventCards shuffelArray = _eventArray[i];
 			int randomIndex = Random.Range(i, arraySize);
+			//print("randomIndex: " + randomIndex);
 			_eventArray[i] = _eventArray[randomIndex];
 			_eventArray[randomIndex] = shuffelArray;
 		}

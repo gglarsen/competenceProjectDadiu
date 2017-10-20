@@ -18,9 +18,11 @@ public class MeterController : MonoBehaviour
 	private float time = 2f;
 
 	[SerializeField]
-	private float newScale;
+	public float _newScale;
 	[SerializeField]
 	public int _resourceMeter;
+	[SerializeField]
+	public int _trackResource;
 	[SerializeField]
 	private int blockNumber;
 	private TextManager tM;
@@ -68,7 +70,7 @@ public class MeterController : MonoBehaviour
 			RightBtnPressed = false;
 		}
 
-		targetScale = currentScale + new Vector3(0, newScale, 0);
+		targetScale = currentScale + new Vector3(0, _newScale, 0);
 
 		if (!fullMeterCheck)
 		{
@@ -118,28 +120,33 @@ public class MeterController : MonoBehaviour
 		{
 			case 1:
 				//print("case1: " + getArray[0]);
-				newScale = ((float)getArray[0] / 100);
+				_newScale = ((float)getArray[0] / 100);
 				_resourceMeter += getArray[0];
+				_trackResource = getArray[0];
 				break;
 			case 2:
 				//print("case2: " + getArray[1]);
-				newScale = ((float)getArray[1] / 100);
+				_newScale = ((float)getArray[1] / 100);
 				_resourceMeter += getArray[1];
+				_trackResource = getArray[1];
 				break;
 			case 3:
 				//print("case3: " + getArray[2]);
-				newScale = ((float)getArray[2] / 100);
+				_newScale = ((float)getArray[2] / 100);
 				_resourceMeter += getArray[2];
+				_trackResource = getArray[2];
 				break;
 			case 4:
 				//print("case4: " + getArray[3]);
-				newScale = ((float)getArray[3] / 100);
+				_newScale = ((float)getArray[3] / 100);
 				_resourceMeter += getArray[3];
+				_trackResource = getArray[3];
 				break;
 			case 5:
 				//print("case5: " + getArray[4]);
-				newScale = ((float)getArray[4] / 100);
+				_newScale = ((float)getArray[4] / 100);
 				_resourceMeter += getArray[4];
+				_trackResource = getArray[4];
 				break;
 			default:
 				Debug.Log("Meter Assignment Failed");

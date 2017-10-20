@@ -243,8 +243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
-  newScale: 0
+  _newScale: 0
   _resourceMeter: 0
+  _trackResource: 0
   blockNumber: 2
   waitCheck: 0
   fullMeterCheck: 0
@@ -949,8 +950,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
-  newScale: 0
+  _newScale: 0
   _resourceMeter: 0
+  _trackResource: 0
   blockNumber: 5
   waitCheck: 0
   fullMeterCheck: 0
@@ -1178,7 +1180,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4a43976c53cf94687bf6eaf9c56b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceSize: 2
+  bounceSize: 3
+  meterStatus: {fileID: 530947514}
+  dangerMax: 80
+  dangerMin: 20
+--- !u!1 &460542794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 460542798}
+  - component: {fileID: 460542797}
+  - component: {fileID: 460542796}
+  - component: {fileID: 460542795}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!23 &460542795
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 460542794}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: d6ee42de0730fb246be5ef21da4d96f7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &460542796
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 460542794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &460542797
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 460542794}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &460542798
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 460542794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.45, y: 3.02, z: 9.62}
+  m_LocalScale: {x: 0.7186202, y: 0.7186203, z: 0.7186203}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &530947512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,8 +1310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
-  newScale: 0
+  _newScale: 0
   _resourceMeter: 0
+  _trackResource: 0
   blockNumber: 1
   waitCheck: 0
   fullMeterCheck: 0
@@ -1310,6 +1400,7 @@ GameObject:
   - component: {fileID: 619309558}
   - component: {fileID: 619309560}
   - component: {fileID: 619309559}
+  - component: {fileID: 619309561}
   m_Layer: 5
   m_Name: Swamp
   m_TagString: Untagged
@@ -1368,6 +1459,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 619309557}
+--- !u!114 &619309561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 619309557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4a43976c53cf94687bf6eaf9c56b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSize: 3
+  meterStatus: {fileID: 84715344}
+  dangerMax: 80
+  dangerMin: 20
 --- !u!1 &630111789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,8 +1640,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 4
-  fullScale: {x: 1, y: 0.2, z: 0.5}
+  upScale: {x: 1, y: 0.2, z: 0.5}
   zeroScale: {x: 0, y: 0, z: 0}
+  scaleFactor: []
   textManager: {fileID: 1853563136}
   time: 1
 --- !u!23 &652284792
@@ -1633,8 +1740,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 3
-  fullScale: {x: 1, y: 0.2, z: 0.5}
+  upScale: {x: 1, y: 0.2, z: 0.5}
   zeroScale: {x: 0, y: 0, z: 0}
+  scaleFactor: []
   textManager: {fileID: 1853563136}
   time: 1
 --- !u!23 &730877877
@@ -1894,8 +2002,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
-  newScale: 0
+  _newScale: 0
   _resourceMeter: 0
+  _trackResource: 0
   blockNumber: 4
   waitCheck: 0
   fullMeterCheck: 0
@@ -2048,6 +2157,7 @@ GameObject:
   - component: {fileID: 869236938}
   - component: {fileID: 869236940}
   - component: {fileID: 869236939}
+  - component: {fileID: 869236941}
   m_Layer: 5
   m_Name: International
   m_TagString: Untagged
@@ -2106,6 +2216,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 869236937}
+--- !u!114 &869236941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869236937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4a43976c53cf94687bf6eaf9c56b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSize: 3
+  meterStatus: {fileID: 929900848}
+  dangerMax: 80
+  dangerMin: 20
 --- !u!1 &878221643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,6 +2325,7 @@ GameObject:
   - component: {fileID: 895065769}
   - component: {fileID: 895065771}
   - component: {fileID: 895065770}
+  - component: {fileID: 895065772}
   m_Layer: 5
   m_Name: Budget
   m_TagString: Untagged
@@ -2258,6 +2384,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 895065768}
+--- !u!114 &895065772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895065768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4a43976c53cf94687bf6eaf9c56b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSize: 3
+  meterStatus: {fileID: 782249549}
+  dangerMax: 80
+  dangerMin: 20
 --- !u!1 &929900846
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,8 +2441,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
-  newScale: 0
+  _newScale: 0
   _resourceMeter: 0
+  _trackResource: 0
   blockNumber: 3
   waitCheck: 0
   fullMeterCheck: 0
@@ -2518,8 +2660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 2
-  fullScale: {x: 1, y: 0.2, z: 0.5}
+  upScale: {x: 1, y: 0.2, z: 0.5}
   zeroScale: {x: 0, y: 0, z: 0}
+  scaleFactor: []
   textManager: {fileID: 1853563136}
   time: 1
 --- !u!23 &1048916330
@@ -3254,6 +3397,7 @@ GameObject:
   - component: {fileID: 1478784996}
   - component: {fileID: 1478784998}
   - component: {fileID: 1478784997}
+  - component: {fileID: 1478784999}
   m_Layer: 5
   m_Name: Energy
   m_TagString: Untagged
@@ -3312,6 +3456,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478784995}
+--- !u!114 &1478784999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1478784995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4a43976c53cf94687bf6eaf9c56b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSize: 3
+  meterStatus: {fileID: 337700196}
+  dangerMax: 80
+  dangerMin: 20
 --- !u!1001 &1488307837
 Prefab:
   m_ObjectHideFlags: 0
@@ -3454,8 +3613,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 0
-  fullScale: {x: 1, y: 0.2, z: 0.5}
+  upScale: {x: 1, y: 0.2, z: 0.5}
   zeroScale: {x: 0, y: 0, z: 0}
+  scaleFactor: []
   textManager: {fileID: 1853563136}
   time: 1
 --- !u!1001 &1536419645
@@ -3709,7 +3869,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e8a1cddb6431786419cac70a8015b42e, type: 3}
+    m_Font: {fileID: 12800000, guid: 1c460cf4ccd96224ba30bc86afa51402, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -3850,6 +4010,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6c08ddb8827826840aacb89f693acab5, type: 2}
+    - target: {fileID: 4238773262289958, guid: 4c9beda18b27c494582b61a9be04f9ba, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.608
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c9beda18b27c494582b61a9be04f9ba, type: 2}
   m_IsPrefabParent: 0
@@ -3936,13 +4100,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808302631}
-  m_LocalRotation: {x: -0.083699554, y: 0.92078984, z: -0.22548471, w: -0.3070784}
-  m_LocalPosition: {x: 24.91, y: 21.08, z: 26.52}
+  m_LocalRotation: {x: -0.096267134, y: 0.91072935, z: -0.2631908, w: -0.30337337}
+  m_LocalPosition: {x: 23.46, y: 24.78, z: 24.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 27.817001, y: 216.635, z: -1.014}
+  m_LocalEulerAnglesHint: {x: 32.534, y: 216.536, z: -1.064}
 --- !u!114 &1808302637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4046,8 +4210,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereNumber: 1
-  fullScale: {x: 1, y: 0.2, z: 0.5}
+  upScale: {x: 1, y: 0.2, z: 0.5}
   zeroScale: {x: 0, y: 0, z: 0}
+  scaleFactor: []
   textManager: {fileID: 1853563136}
   time: 1
 --- !u!23 &1851517230

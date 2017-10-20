@@ -20,7 +20,7 @@ MonoBehaviour:
   _checkSwamp: 0
   _meterSwamp: 0
   _checkInternational: 1
-  _meterInternational: 10
+  _meterInternational: 30
   _checkBudget: 1
   _meterBudget: 10
   _checkEnergy: 0

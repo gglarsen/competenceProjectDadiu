@@ -20,9 +20,9 @@ MonoBehaviour:
   _checkSwamp: 0
   _meterSwamp: 0
   _checkInternational: 1
-  _meterInternational: 10
+  _meterInternational: 40
   _checkBudget: 1
-  _meterBudget: 10
+  _meterBudget: 20
   _checkEnergy: 0
   _meterEnergy: 0
   _responseRight: Another response to the current event

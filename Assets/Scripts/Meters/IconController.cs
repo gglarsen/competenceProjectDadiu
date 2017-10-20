@@ -7,12 +7,17 @@ public class IconController : MonoBehaviour
 	[SerializeField]
 	private int sphereNumber; //start at 0 plz
 	[SerializeField]
-	private Vector3 fullScale = new Vector3(1f, .2f, .5f);
+	private Vector3 upScale = new Vector3(1f, .2f, .5f);
 	[SerializeField]
 	private Vector3 zeroScale = new Vector3(0f, .0f, 0f);
 	private bool[] checkArray, checkArrayRight, usedArray;
+	private float[] scaleFactor;
+	[SerializeField]
+	private float sphereSizeFactor = 3;
 	[SerializeField]
 	private TextManager textManager;
+	//[SerializeField]
+	//private MeterController meterController;
 
 	private Vector3 currentScale;
 	[SerializeField]
@@ -55,6 +60,7 @@ public class IconController : MonoBehaviour
 		transform.localScale = zeroScale;
 		checkArray = new bool[5];
 		checkArrayRight = new bool[5];
+		scaleFactor = new float[5];
 	}
 
 	public void IncreaseScaleLeft()
@@ -65,7 +71,15 @@ public class IconController : MonoBehaviour
 		if (checkArray[sphereNumber])
 		{
 			StopAllCoroutines();
-			StartCoroutine(ScaleLerpSphere(fullScale));
+			for (int i = 0; i < 5; i++)
+			{
+				scaleFactor[i] = textManager._meterNumber[i];
+			}
+			upScale.x = 1f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber])) / sphereSizeFactor;
+			upScale.y = .2f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber])) / sphereSizeFactor;
+			upScale.z = .5f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber])) / sphereSizeFactor;
+			print(upScale.x);
+			StartCoroutine(ScaleLerpSphere(upScale));
 		}
 	}
 
@@ -77,7 +91,16 @@ public class IconController : MonoBehaviour
 		if (checkArrayRight[sphereNumber])
 		{
 			StopAllCoroutines();
-			StartCoroutine(ScaleLerpSphere(fullScale));
+			for (int i = 0; i < 5; i++)
+			{
+				scaleFactor[i] = textManager._meterNumberRight[i];
+				print("nr: " + sphereNumber + " number: " + textManager._meterNumberRight[i]);
+			}
+			upScale.x = 1f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber]))/ sphereSizeFactor;
+			upScale.y = .2f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber]))/ sphereSizeFactor;
+			upScale.z = .5f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber]))/ sphereSizeFactor;
+			print(upScale.x);
+			StartCoroutine(ScaleLerpSphere(upScale));
 		}
 	}
 
