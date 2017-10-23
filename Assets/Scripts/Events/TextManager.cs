@@ -49,7 +49,10 @@ public class TextManager : MonoBehaviour
 	public delegate void CheckAction();
 	public static event CheckAction CheckActive;
 
-	void Start()
+    public delegate void DuckAction();
+    public static event DuckAction DuckActive;
+
+    void Start()
 	{
 		_meterNumber = new int[5];
 		_meterNumberRight = new int[5];
@@ -96,6 +99,7 @@ public class TextManager : MonoBehaviour
 
 		TrackNumber();
 
+        DuckActive();
 		CheckPass(); // assign boolchecks for spheres to array;
 		CheckActive(); // send new onEnter update to update spheres;
 

@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114620952156128666}
   - component: {fileID: 114843609728804480}
   - component: {fileID: 114170216891915894}
+  - component: {fileID: 114346193204610116}
+  - component: {fileID: 114209821130037072}
   m_Layer: 0
   m_Name: LineManager
   m_TagString: Untagged
@@ -54,6 +56,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerMovement: 0
+--- !u!114 &114209821130037072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047013397399304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb97b0e48b058e94c8db102ca75b9c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duckPrefab: {fileID: 4689514288448572, guid: 94e67adff809b1444b73bb08ef5e9a66, type: 2}
+--- !u!114 &114346193204610116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047013397399304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2a1c7bc22586044b89a01d6a9d0b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {x: -1.8, y: 18, z: -9.24}
+  line1: {x: -1.8, y: 6.43, z: -9.24}
+  line2: {x: -1.8, y: 4.08, z: -9.24}
+  line3: {x: -1.8, y: 1.41, z: -9.24}
 --- !u!114 &114620952156128666
 MonoBehaviour:
   m_ObjectHideFlags: 1

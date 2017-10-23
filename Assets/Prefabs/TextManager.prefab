@@ -57,6 +57,7 @@ MonoBehaviour:
   eventDisplayText: {fileID: 0}
   leftResponse: {fileID: 0}
   rightResponse: {fileID: 0}
+  gameManager: {fileID: 0}
   _eventArray:
   - {fileID: 11400000, guid: 4a5f47e7370963d4db8ab0d4ded13a1c, type: 2}
   - {fileID: 11400000, guid: af5521d04390ccf4abe60755d44063b4, type: 2}
@@ -72,3 +73,4 @@ MonoBehaviour:
   _sphereCheckRight: 
   _meterNumber: 
   _meterNumberRight: 
+  _resourceCount: 

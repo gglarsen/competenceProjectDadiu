@@ -78,7 +78,6 @@ public class IconController : MonoBehaviour
 			upScale.x = 1f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber])) / sphereSizeFactor;
 			upScale.y = .2f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber])) / sphereSizeFactor;
 			upScale.z = .5f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber])) / sphereSizeFactor;
-			print(upScale.x);
 			StartCoroutine(ScaleLerpSphere(upScale));
 		}
 	}
@@ -94,12 +93,11 @@ public class IconController : MonoBehaviour
 			for (int i = 0; i < 5; i++)
 			{
 				scaleFactor[i] = textManager._meterNumberRight[i];
-				print("nr: " + sphereNumber + " number: " + textManager._meterNumberRight[i]);
+				//print("nr: " + sphereNumber + " number: " + textManager._meterNumberRight[i]);
 			}
 			upScale.x = 1f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber]))/ sphereSizeFactor;
 			upScale.y = .2f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber]))/ sphereSizeFactor;
 			upScale.z = .5f * Mathf.Log(Mathf.Abs(scaleFactor[sphereNumber]))/ sphereSizeFactor;
-			print(upScale.x);
 			StartCoroutine(ScaleLerpSphere(upScale));
 		}
 	}
@@ -130,7 +128,6 @@ public class IconController : MonoBehaviour
 			yield return null;
 		}
 		transform.localScale = targetScale;
-		//waitCheck = false;
 		yield return null;
 	}
 }
