@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+/* Gets the array with meterResource values from TextManager.determines if meters own number = the values in array the meter is affected.
+ * The meters gets the values from the prevois event. as their status is not updated until after a new event starts (button clicked / choice made)
+ */
 public class MeterController : MonoBehaviour
 {
 	private bool LeftBtnPressed;

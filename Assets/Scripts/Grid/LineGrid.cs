@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*Defines the grid that is used by the Characters/blocks
+*/
 public class LineGrid : MonoBehaviour
 {
 	[SerializeField]

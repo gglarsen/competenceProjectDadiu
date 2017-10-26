@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*  Handles the ducks movement in the grid. When a duck is spawned it sets its own spot to the lowest non occupied spot
+ *  When clicked send event to TextManager and destroy self.
+ */
+
 public class DuckMovement : MonoBehaviour
 {
     [SerializeField]
@@ -9,19 +13,12 @@ public class DuckMovement : MonoBehaviour
     private Vector3 currentPosition;
     private int totalSpots = 3;
 
-    private float time = 2f;
+    private float time = 1f;
 
     public GameObject lineManager;
 
-    void OnEnable()
-    {
-        TextManager.DuckActive += MoveDuck;
-    }
-
-    void OnDisable()
-    {
-        TextManager.DuckActive -= MoveDuck;
-    }
+    public delegate void DuckAction();
+    public static event DuckAction DuckActive;
 
     void Start()
     {
@@ -32,19 +29,31 @@ public class DuckMovement : MonoBehaviour
     {
     }
 
+    private void OnMouseDown()
+    {
+        if (!TextManager._waitCheck)
+        {
+            DuckActive();
+            DuckGrid._spotOccupied[mySpot] = false;
+            DestroyObject(gameObject);
+            MoveDuck();
+        }
+    }
+
     void MoveDuck() // Move duck to the lowest avaiable spot;
     {
-        if(mySpot > totalSpots)
+        if (mySpot > totalSpots)
         {
             return;
         }
 
-        for(int i = totalSpots; i > 0; i--)
+        for (int i = totalSpots; i > 0; i--)
         {
-            if(DuckGrid._gridFull[i] == false)
+            if (DuckGrid._spotOccupied[i] == false && mySpot < i)
             {
+                DuckGrid._spotOccupied[mySpot] = false;
                 mySpot = i;
-                DuckGrid._gridFull[i] = true;
+                DuckGrid._spotOccupied[i] = true;
                 break;
             }
         }
@@ -55,7 +64,7 @@ public class DuckMovement : MonoBehaviour
 
     private IEnumerator MoveDuckAnim()
     {
-        
+
         float elapsedTime = 0;
         while (elapsedTime < time)
         {

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*Controls boolCheck for GameOver. Determines the reason for GameOver and uses correct response. Deactivates response buttons
+ * and activates Restart button.
+ */
+
 public class GameOver : MonoBehaviour
 {
 	public bool _gameOverFlag;
@@ -48,7 +52,7 @@ public class GameOver : MonoBehaviour
 		}
 	}
 
-	void EndReason()
+	void EndReason() // checks what meter got full/emptu and show appropiate endEvent.
 	{
 		for (int i = 0; i < 4; i++)
 		{

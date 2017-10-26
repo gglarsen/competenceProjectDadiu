@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Gets the array with Sphere boolChecks from TextManager. determines if spheres own number = boolCheck in array.
+ * sphereMarkers are shown on howering over left and right response.
+ */
+
 public class IconController : MonoBehaviour
 {
 	[SerializeField]
@@ -66,7 +70,7 @@ public class IconController : MonoBehaviour
 	public void IncreaseScaleLeft()
 	{
 		transform.localScale = zeroScale;
-		checkArray = textManager.GetComponent<TextManager>()._sphereCheck;
+		checkArray = textManager.GetComponent<TextManager>()._sphereCheckLeft;
 
 		if (checkArray[sphereNumber])
 		{

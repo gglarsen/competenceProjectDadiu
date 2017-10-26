@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Handles the roating "characters"/blocks that stands in a quoue.
+ * 
+ */ 
 public class CharMovement : MonoBehaviour
 {
 	[SerializeField]

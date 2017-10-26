@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Names bounces to indicate that a resource is cloe to being filled/depleted
+ */
 public class NameBounce : MonoBehaviour
 {
 	private float elapsedTime;

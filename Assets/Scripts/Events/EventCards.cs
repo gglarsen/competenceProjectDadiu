@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*Scriptable Objects for events/cards, Cards have a name, event text, response text for left/right.
+Information for how much they affect a meter, and a boolCheck to mark if they effect a meter.
+BoolChekc is for SphereMarkers over Meters to signal MeterChange on mouseOver responseButton.
+*/
+
 [CreateAssetMenu(fileName = "Data", menuName = "EventCards", order = 1)]
 public class EventCards : ScriptableObject
 {
