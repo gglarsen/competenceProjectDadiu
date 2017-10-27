@@ -11,28 +11,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
   m_Name: Test7
   m_EditorClassIdentifier: 
-  _eventName: Number 7
-  _textForEvent: ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego
-    10, sawmp 10ego 10, sawmp 10
-  _responseLeft: No
+  _eventName: Tweet Time
+  _textForEvent: You are up early Mr. president, maybe you should do a tweet.
+  _responseLeft: "\u201CThe concept of global warming was created by and for the chinese\u201D. "
   _checkEgo: 0
   _meterEgo: 0
-  _checkSwamp: 0
-  _meterSwamp: 0
+  _checkSwamp: 1
+  _meterSwamp: 20
   _checkInternational: 1
-  _meterInternational: 20
+  _meterInternational: -20
   _checkBudget: 1
-  _meterBudget: 10
+  _meterBudget: -10
   _checkEnergy: 0
   _meterEnergy: 0
-  _responseRight: Tweet that the king is dead
+  _responseRight: "\u201C............ Covfefe.\u201D"
   _checkEgoRight: 0
   _meterEgoRight: 0
   _checkSwampRight: 0
   _meterSwampRight: 0
   _checkInternationalRight: 0
   _meterInternationalRight: 0
-  _checkBudgetRight: 1
-  _meterBudgetRight: -10
+  _checkBudgetRight: 0
+  _meterBudgetRight: 0
   _checkEnergyRight: 1
-  _meterEnergyRight: -10
+  _meterEnergyRight: 10

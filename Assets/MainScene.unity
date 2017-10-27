@@ -2862,31 +2862,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114346193204610116, guid: 9a41b3f59e0329f4c95054998faaf78a,
-        type: 2}
-      propertyPath: line3.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114346193204610116, guid: 9a41b3f59e0329f4c95054998faaf78a,
-        type: 2}
-      propertyPath: line2.y
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114346193204610116, guid: 9a41b3f59e0329f4c95054998faaf78a,
-        type: 2}
-      propertyPath: line1.y
-      value: 5.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209821130037072, guid: 9a41b3f59e0329f4c95054998faaf78a,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114170216891915894, guid: 9a41b3f59e0329f4c95054998faaf78a,
-        type: 2}
-      propertyPath: triggerMovement
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a41b3f59e0329f4c95054998faaf78a, type: 2}
   m_IsPrefabParent: 0
@@ -3829,7 +3804,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lets GO
+  m_Text: The Orange King
 --- !u!222 &1674507242
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3903,7 +3878,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: Are you ready to be king?
+  m_Text: Are you ready to be president?
 --- !u!222 &1777126696
 CanvasRenderer:
   m_ObjectHideFlags: 0

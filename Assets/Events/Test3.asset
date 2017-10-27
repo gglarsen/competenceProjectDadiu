@@ -11,28 +11,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
   m_Name: Test3
   m_EditorClassIdentifier: 
-  _eventName: Number 3
-  _textForEvent: ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego
-    10, sawmp 10
-  _responseLeft: No
+  _eventName: Immigrant Promise
+  _textForEvent: Mr. President you promised to do something about Immigration in our
+    nation.
+  _responseLeft: eh, seems like work.
   _checkEgo: 0
   _meterEgo: 0
   _checkSwamp: 0
   _meterSwamp: 0
-  _checkInternational: 1
-  _meterInternational: 30
+  _checkInternational: 0
+  _meterInternational: 0
   _checkBudget: 1
   _meterBudget: 10
-  _checkEnergy: 0
-  _meterEnergy: 0
-  _responseRight: Yes
-  _checkEgoRight: 0
-  _meterEgoRight: 0
-  _checkSwampRight: 0
-  _meterSwampRight: 0
+  _checkEnergy: 1
+  _meterEnergy: 20
+  _responseRight: Sign an executive order stopping immigration from certain countries,
+    totally not based on any specific religious group.
+  _checkEgoRight: 1
+  _meterEgoRight: 10
+  _checkSwampRight: 1
+  _meterSwampRight: 10
   _checkInternationalRight: 1
-  _meterInternationalRight: -10
-  _checkBudgetRight: 1
-  _meterBudgetRight: -10
+  _meterInternationalRight: -20
+  _checkBudgetRight: 0
+  _meterBudgetRight: 0
   _checkEnergyRight: 0
   _meterEnergyRight: 0

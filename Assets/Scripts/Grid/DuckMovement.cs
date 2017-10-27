@@ -20,13 +20,19 @@ public class DuckMovement : MonoBehaviour
     public delegate void DuckAction();
     public static event DuckAction DuckActive;
 
+    void OnEnable()
+    {
+        DuckMovement.DuckActive += MoveDuck;
+    }
+
+    void OnDisable()
+    {
+        DuckMovement.DuckActive -= MoveDuck;
+    }
+
     void Start()
     {
         MoveDuck();
-    }
-
-    void Update()
-    {
     }
 
     private void OnMouseDown()
@@ -35,8 +41,8 @@ public class DuckMovement : MonoBehaviour
         {
             DuckActive();
             DuckGrid._spotOccupied[mySpot] = false;
+            DuckActive();
             DestroyObject(gameObject);
-            MoveDuck();
         }
     }
 

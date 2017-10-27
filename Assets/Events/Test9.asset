@@ -9,30 +9,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
-  m_Name: Test8
+  m_Name: Test9
   m_EditorClassIdentifier: 
-  _eventName: Important Matters
-  _textForEvent: "The birth location of the previous president has come into question\u2026
-    by you. What is your position now?"
-  _responseLeft: Maybe we should let that go.
+  _eventName: Nasty Words
+  _textForEvent: "The secretary of state has supposedly called you \u201CA Fuc*ing
+    Moron\u201D, what is your response. "
+  _responseLeft: Lets handle this internally.
   _checkEgo: 1
-  _meterEgo: -20
-  _checkSwamp: 0
-  _meterSwamp: -10
+  _meterEgo: -10
+  _checkSwamp: 1
+  _meterSwamp: 20
   _checkInternational: 0
   _meterInternational: 0
   _checkBudget: 0
   _meterBudget: 0
-  _checkEnergy: 1
-  _meterEnergy: 10
-  _responseRight: I have credible sources saying that his birth certificate was faked.
+  _checkEnergy: 0
+  _meterEnergy: 0
+  _responseRight: I will challenge him to a IQ test over twitter.
   _checkEgoRight: 1
   _meterEgoRight: 10
-  _checkSwampRight: 0
-  _meterSwampRight: 0
+  _checkSwampRight: 1
+  _meterSwampRight: -20
   _checkInternationalRight: 0
   _meterInternationalRight: 0
   _checkBudgetRight: 0
   _meterBudgetRight: 0
-  _checkEnergyRight: 1
-  _meterEnergyRight: -10
+  _checkEnergyRight: 0
+  _meterEnergyRight: 0

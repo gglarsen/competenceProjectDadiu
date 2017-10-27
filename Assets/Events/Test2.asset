@@ -11,23 +11,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84b4a965e81d7f42a2b983c4dadbd84, type: 3}
   m_Name: Test2
   m_EditorClassIdentifier: 
-  _eventName: Number 2
-  _textForEvent: ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego 10, sawmp 10ego
-    10, sawmp 10ego 10, sawmp 10
-  _responseLeft: Eat Shit
-  _checkEgo: 0
-  _meterEgo: 0
+  _eventName: Federal Bureau
+  _textForEvent: "The former director of our intelligence bureau is accusing you for
+    demanding loyalty from impartial government positions.\r"
+  _responseLeft: Nobody cares
+  _checkEgo: 1
+  _meterEgo: -10
   _checkSwamp: 0
   _meterSwamp: 0
-  _checkInternational: 1
-  _meterInternational: 40
-  _checkBudget: 1
-  _meterBudget: 10
-  _checkEnergy: 0
-  _meterEnergy: 0
-  _responseRight: You Fucking Bet
-  _checkEgoRight: 0
-  _meterEgoRight: 0
+  _checkInternational: 0
+  _meterInternational: 0
+  _checkBudget: 0
+  _meterBudget: 0
+  _checkEnergy: 1
+  _meterEnergy: -10
+  _responseRight: He better hope there are no Tapes!
+  _checkEgoRight: 1
+  _meterEgoRight: 20
   _checkSwampRight: 1
   _meterSwampRight: -10
   _checkInternationalRight: 1

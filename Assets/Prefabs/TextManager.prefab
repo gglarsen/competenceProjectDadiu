@@ -67,9 +67,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 98d5d2c8071bd79499e93af7b6b80a4e, type: 2}
   - {fileID: 11400000, guid: 98d5d2c8071bd79499e93af7b6b80a4e, type: 2}
   - {fileID: 11400000, guid: 9dbd8faaab31c704595b4e3b9f06dca7, type: 2}
-  arraySize: 8
-  waitCheck: 0
-  _sphereCheck: 
+  - {fileID: 11400000, guid: 5dedafbd2d4709241a2b74dd6b1bbb72, type: 2}
+  - {fileID: 11400000, guid: 9f950b63a589e0a4c86cc7f7296811b2, type: 2}
+  arraySize: 10
+  _sphereCheckLeft: 
   _sphereCheckRight: 
   _meterNumber: 
   _meterNumberRight: 

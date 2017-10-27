@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duckPrefab: {fileID: 4689514288448572, guid: 94e67adff809b1444b73bb08ef5e9a66, type: 2}
+  probabilityFactor: 1
 --- !u!114 &114346193204610116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,9 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {x: -1.8, y: 18, z: -9.24}
-  line1: {x: -1.8, y: 6.43, z: -9.24}
-  line2: {x: -1.8, y: 4.08, z: -9.24}
-  line3: {x: -1.8, y: 1.41, z: -9.24}
+  line1: {x: -1.8, y: 5.5, z: -9.24}
+  line2: {x: -1.8, y: 3.5, z: -9.24}
+  line3: {x: -1.8, y: 1.5, z: -9.24}
 --- !u!114 &114620952156128666
 MonoBehaviour:
   m_ObjectHideFlags: 1
