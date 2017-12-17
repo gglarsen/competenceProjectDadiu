@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /* Gets the cards from the scriptableObjects and puts them into _eventArray, starts with shuffeling the array
- * and then assings the currentCard as the first in the Array. Increments cardNumber each at each Card to update the
+ * and then assings the currentCard as the first in the Array. Increments cardNumber at each Card to update the
  * currentCard. 
  * Handles all the systems of the cardText, resourceMeters and sphereMarkers.
  * Uses gameOver flag, btnPressed flags, duckClick flag
